@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>НТО — физика, задачи 1–10</title>
+<style>
+:root{color-scheme:light dark;--bg:#f4f6fb;--card:#fff;--text:#172033;--muted:#5e6a80;--accent:#315ee8;--line:#d9dfeb;--good:#087f5b}
+@media(prefers-color-scheme:dark){:root{--bg:#101522;--card:#192133;--text:#edf2ff;--muted:#a9b4ca;--accent:#8ba6ff;--line:#303b51;--good:#70dfb6}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.58 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{padding:28px 18px 20px;background:linear-gradient(120deg,#183a9e,#416be9);color:#fff}
+header h1{max-width:1000px;margin:0 auto 8px;font-size:clamp(1.5rem,4vw,2.25rem)}header p{max-width:1000px;margin:auto;opacity:.94}
+main{max-width:1000px;margin:20px auto;padding:0 14px 50px}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+nav button,.toggle{border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--card);color:var(--text);cursor:pointer}
+nav button.active{background:var(--accent);color:white;border-color:var(--accent)}
+article{display:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:clamp(16px,3vw,28px);margin:14px 0;box-shadow:0 5px 18px #1720330b}
+article.active{display:block}h2{margin:0 0 8px;font-size:1.45rem}h3{margin:18px 0 6px;font-size:1.08rem}.tag{color:var(--muted);font-size:.92rem}
+.answer{border-left:4px solid var(--good);padding:9px 13px;margin:14px 0;background:color-mix(in srgb,var(--good) 8%,var(--card));border-radius:5px}
+.diagram{border:1px solid var(--line);border-radius:12px;margin:14px 0;padding:12px;overflow:hidden;background:color-mix(in srgb,var(--bg) 55%,var(--card))}
+svg{display:block;max-width:100%;height:auto;margin:auto}svg text{font-family:system-ui,Arial,sans-serif;fill:var(--text)}.formula{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:color-mix(in srgb,var(--accent) 8%,var(--card));padding:2px 6px;border-radius:5px}
+.small{font-size:.92rem;color:var(--muted)}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0}.range{width:min(360px,100%)}.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;background:var(--accent);width:50%}
+footer{color:var(--muted);font-size:.9rem;text-align:center;margin-top:24px}
+</style>
+</head>
+<body>
+<header><h1>НТО 26/27 · Физика · задачи 1–10</h1><p>Решения по шагам и наглядные схемы. Визуализации схематические; в расчётах используются идеальные элементы, как в условиях задач.</p></header>
+<main>
+<nav id="nav"></nav>
+<section id="cards">
+<article data-n="1">
+<h2>1. Ключи и лампочка</h2><div class="tag">Электрическая цепь · идеальный вольтметр</div>
+<div class="diagram"><svg viewBox="0 0 420 220" role="img" aria-label="Схема лампы, источника, вольтметра и двух ключей">
+<path d="M45 35 H190 M45 35 V180 H100 M145 180 H300 V35 H245" stroke="currentColor" stroke-width="3" fill="none"/>
+<circle cx="122" cy="180" r="22" fill="none" stroke="currentColor" stroke-width="3"/><path d="M106 164 L138 196 M138 164 L106 196" stroke="currentColor" stroke-width="2"/>
+<circle cx="120" cy="95" r="22" fill="none" stroke="currentColor" stroke-width="3"/><text x="120" y="102" text-anchor="middle" font-size="20">V</text>
+<path d="M45 95 H98 M142 95 H190 V145" stroke="currentColor" stroke-width="3" fill="none"/>
+<path d="M190 145 V180 M190 145 L218 120" stroke="currentColor" stroke-width="3" fill="none"/><text x="223" y="118" font-size="14">K2</text>
+<circle cx="190" cy="95" r="5" fill="var(--accent)"/><text x="198" y="88" font-size="14">б</text>
+<circle cx="190" cy="35" r="5" fill="var(--accent)"/><text x="198" y="29" font-size="14">а</text>
+<path d="M190 35 L218 59 H300" stroke="currentColor" stroke-width="3" fill="none"/><text x="222" y="51" font-size="14">K1</text>
+<path d="M265 165 V195 M278 158 V202" stroke="currentColor" stroke-width="3"/><text x="290" y="188" font-size="12">источник</text>
+</svg></div>
+<h3>Решение</h3><p>Чтобы лампа горела, источник должен быть включён последовательно с лампой: ключ <b>K1 — в положении «а»</b>. Чтобы вольтметр измерял именно напряжение на лампе, его второй вывод надо соединить со вторым выводом лампы — для этого <b>K2 должен быть замкнут</b>.</p>
+<p>Идеальный вольтметр имеет очень большое сопротивление и сам по себе практически не проводит ток, поэтому не заменяет соединение, необходимое для замыкания цепи лампы.</p>
+<div class="answer"><b>Ответ:</b> вариант 2 — K1 в положении «а», K2 замкнут.</div>
+</article>
+<article data-n="2">
+<h2>2. Экспериментальная установка</h2><div class="tag">История физики · механический эквивалент теплоты</div>
+<div class="diagram"><svg viewBox="0 0 420 210" role="img" aria-label="Схема опыта Джоуля с падающим грузом и лопастями в жидкости">
+<path d="M45 165 H375" stroke="currentColor" stroke-width="4"/><path d="M110 68 V150 Q110 165 125 165 H230 Q245 165 245 150 V68" fill="none" stroke="currentColor" stroke-width="3"/>
+<path d="M114 105 H241 V158 H114Z" fill="#65b8e8" opacity=".45"/><path d="M177 35 V145" stroke="currentColor" stroke-width="4"/><circle cx="177" cy="116" r="5" fill="var(--accent)"/><path d="M150 116 H204 M177 91 V141" stroke="var(--accent)" stroke-width="4"/>
+<circle cx="177" cy="25" r="11" fill="none" stroke="currentColor" stroke-width="3"/><path d="M177 25 H310 V78" fill="none" stroke="currentColor" stroke-width="2"/><rect x="292" y="78" width="36" height="48" rx="4" fill="#9aa5b8" stroke="currentColor" stroke-width="2"/>
+<text x="310" y="105" text-anchor="middle" font-size="13">m</text><text x="95" y="188" font-size="13">жидкость</text><text x="191" y="45" font-size="13">лопасти</text>
+</svg></div>
+<p>В классическом опыте Джоуля падающие грузы вращали лопасти в жидкости. Механическая работа превращалась во внутреннюю энергию жидкости, что позволило установить количественную связь между работой и теплотой.</p>
+<div class="answer"><b>Ответ:</b> джоуль (Дж).</div>
+</article>
+<article data-n="3">
+<h2>3. Два провода</h2><div class="tag">Магнитное поле · принцип суперпозиции</div>
+<div class="diagram"><svg viewBox="0 0 420 250" role="img" aria-label="Два провода на окружности вокруг точки A">
+<circle cx="210" cy="120" r="85" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><circle cx="210" cy="120" r="4" fill="var(--accent)"/><text x="219" y="115">A</text>
+<circle cx="148" cy="176" r="17" fill="#ffe0e0" stroke="#d33" stroke-width="2"/><path d="M138 166 L158 186 M158 166 L138 186" stroke="#d33" stroke-width="3"/><text x="148" y="207" text-anchor="middle">провод 1</text>
+<circle cx="267" cy="176" r="17" fill="#dcecff" stroke="#2463c9" stroke-width="2"/><circle cx="267" cy="176" r="5" fill="#2463c9"/><text x="267" y="207" text-anchor="middle">провод 2</text>
+<path d="M210 120 L148 176 M210 120 L267 176" stroke="var(--muted)" stroke-dasharray="3 4"/>
+<path d="M267 176 Q292 157 300 135" stroke="var(--accent)" stroke-width="3" fill="none"/><path d="M292 138 L300 135 L301 145" fill="none" stroke="var(--accent)" stroke-width="3"/>
+<text x="286" y="98" font-size="13">движение</text>
+</svg></div>
+<p>Модуль поля длинного прямого провода равен <span class="formula">B = μ₀I/(2πr)</span>. Точка A всё время находится на одном и том же расстоянии от провода 2, поэтому модуль поля этого провода не меняется, но направление его вектора меняется. Поле провода 1 постоянно.</p>
+<p>Токи направлены противоположно (крестик и точка). Поэтому результирующее поле двух равных по модулю векторов имеет модуль, зависящий от угла между ними. При движении по показанной дуге угол между радиусами к проводам увеличивается; модуль результирующего поля увеличивается, а направление поворачивается в ту же сторону, что и провод 2.</p>
+<div class="answer"><b>Ответ:</b> вариант 1 — индукция увеличивается и поворачивается вслед за проводником 2.</div>
+</article>
+<article data-n="4">
+<h2>4. Струна</h2><div class="tag">Стоячие волны · флажолет</div>
+<div class="diagram"><svg viewBox="0 0 420 240" role="img" aria-label="Колебания струны и точки узла">
+<text x="12" y="28" font-size="14">Открытая струна: основная частота ν₀</text><path d="M25 50 Q210 105 395 50" stroke="#e64b4b" stroke-width="3" fill="none"/><path d="M25 50 Q210 -5 395 50" stroke="#e64b4b" stroke-width="2" fill="none" opacity=".6"/>
+<text x="12" y="119" font-size="14">Флажолет 1: узел на 1/3 длины</text><path d="M25 145 Q85 195 145 145 Q270 95 395 145" stroke="#e39b20" stroke-width="3" fill="none"/><path d="M25 145 Q85 95 145 145 Q270 195 395 145" stroke="#e39b20" stroke-width="2" fill="none" opacity=".7"/><circle cx="148" cy="145" r="5" fill="var(--accent)"/>
+<text x="12" y="211" font-size="14">Флажолет 2: узел посередине</text><path d="M25 224 Q117 180 210 224 Q302 268 395 224" stroke="#168b6a" stroke-width="3" fill="none"/>
+<circle cx="210" cy="224" r="5" fill="var(--accent)"/>
+</svg></div>
+<p>Для струны длины L с закреплёнными концами основная частота <span class="formula">ν₀ = v/(2L)</span>. Если точка на расстоянии L/3 становится узлом, первый подходящий режим — третья гармоника: <span class="formula">ν₁ = 3ν₀</span>. Если узел посередине, получается вторая гармоника: <span class="formula">ν₂ = 2ν₀</span>.</p>
+<div class="answer"><b>Ответ:</b> <span class="formula">ν₀ &lt; ν₂ &lt; ν₁</span> — вариант 2.</div>
+</article>
+<article data-n="5">
+<h2>5. Резкая фотография, размытая фотография</h2><div class="tag">Тонкая линза · диафрагма · глубина резкости</div>
+<div class="diagram"><svg viewBox="0 0 420 220" role="img" aria-label="Объектив, диафрагма и матрица">
+<path d="M25 45 H395 M25 175 H395" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 5"/>
+<path d="M95 45 Q62 110 95 175 Q128 110 95 45Z" fill="#9dd6ff" stroke="#2775b8" stroke-width="2"/><text x="95" y="198" text-anchor="middle" font-size="13">объектив</text>
+<path d="M225 60 V93 M225 127 V160" stroke="currentColor" stroke-width="4"/><path d="M215 93 H235 M215 127 H235" stroke="currentColor" stroke-width="2"/><text x="225" y="42" text-anchor="middle" font-size="13">диафрагма</text>
+<path d="M360 40 V180" stroke="var(--accent)" stroke-width="5"/><text x="360" y="198" text-anchor="middle" font-size="13">матрица</text>
+<path d="M95 110 L360 70 M95 110 L360 150" stroke="#e39b20" stroke-width="2" fill="none"/><path d="M95 110 L225 93 L360 110 M95 110 L225 127 L360 110" stroke="#168b6a" stroke-width="2" fill="none" opacity=".8"/>
+<path d="M95 30 H225 M95 25 V35 M225 25 V35" stroke="var(--muted)" stroke-width="1"/><text x="160" y="22" text-anchor="middle" font-size="13">c</text>
+<path d="M225 30 H360 M360 25 V35" stroke="var(--muted)" stroke-width="1"/><text x="292" y="22" text-anchor="middle" font-size="13">b</text>
+<text x="243" y="113" font-size="13">a</text>
+</svg></div>
+<p><b>1. Увеличить a</b> — увеличить отверстие диафрагмы. Световые конусы становятся шире, поэтому расфокусированные изображения дают большие кружки размытия: близкие и далёкие предметы становятся размытее.</p>
+<p><b>2. Увеличить b</b> — отодвинуть матрицу от объектива. По формуле линзы <span class="formula">1/f = 1/u + 1/v</span>, большему расстоянию изображения v соответствует более близкий предмет u. Поэтому близкие предметы станут чётче, далёкие — размытее.</p>
+<p><b>3. Увеличить c</b> — переместить диафрагму дальше за объектив. В показанной схеме это уменьшает эффективный пучок лучей, доходящий до матрицы, и повышает глубину резкости: практически все предметы становятся чётче.</p>
+<div class="answer"><b>Ответ:</b> <span class="formula">1Г 2А 3В</span>.</div>
+</article>
+<article data-n="6">
+<h2>6. Тянем-потянем</h2><div class="tag">Идеальные блоки · равновесие сил</div>
+<div class="diagram"><svg viewBox="0 0 420 235" role="img" aria-label="Узел с тремя силами">
+<circle cx="205" cy="105" r="6" fill="var(--accent)"/><path d="M205 105 V30 H335 V115" stroke="#2463c9" stroke-width="3" fill="none"/><rect x="313" y="115" width="44" height="40" rx="5" fill="#aeb8c8" stroke="currentColor"/><text x="335" y="139" text-anchor="middle" font-size="13">6 кг</text>
+<path d="M205 105 H290 V175" stroke="#168b6a" stroke-width="3" fill="none"/><rect x="271" y="175" width="38" height="30" rx="4" fill="#aeb8c8" stroke="currentColor"/><text x="290" y="194" text-anchor="middle" font-size="13">m</text>
+<path d="M205 105 L95 170" stroke="#d97706" stroke-width="4"/><text x="115" y="123" font-size="14">F = 10 кгс</text>
+<path d="M205 105 V67 M205 105 H245" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><path d="M205 85 L199 96 L211 96Z" fill="#2463c9"/><path d="M230 105 L219 99 L219 111Z" fill="#168b6a"/>
+<text x="214" y="57" font-size="13">6 кгс</text><text x="242" y="96" font-size="13">m кгс</text>
+</svg></div>
+<p>В узле сходятся три силы. Тяга верхней нити равна весу груза 6 кг, то есть 6 кгс. Тяга горизонтальной нити равна весу неизвестного груза m кгс. Эти две силы взаимно перпендикулярны, а динамометр показывает их равнодействующую — 10 кгс.</p>
+<p>По теореме Пифагора: <span class="formula">10² = 6² + m²</span>, откуда <span class="formula">m² = 100 − 36 = 64</span>, поэтому <span class="formula">m = 8 кг</span>.</p>
+<div class="answer"><b>Ответ:</b> 8 кг.</div>
+</article>
+<article data-n="7">
+<h2>7. Четырёхполюсник</h2><div class="tag">Закон Ома · последовательное и параллельное соединение</div>
+<div class="diagram"><svg viewBox="0 0 420 250" role="img" aria-label="Мост из четырёх резисторов">
+<path d="M210 28 L105 115 L210 202 L315 115 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+<rect x="137" y="57" width="65" height="26" rx="4" transform="rotate(-40 169 70)" fill="var(--card)" stroke="#2463c9" stroke-width="2"/><text x="170" y="72" text-anchor="middle">R₁</text>
+<rect x="218" y="57" width="65" height="26" rx="4" transform="rotate(40 250 70)" fill="var(--card)" stroke="#2463c9" stroke-width="2"/><text x="250" y="72" text-anchor="middle">R₂</text>
+<rect x="137" y="145" width="65" height="26" rx="4" transform="rotate(40 169 158)" fill="var(--card)" stroke="#168b6a" stroke-width="2"/><text x="170" y="164" text-anchor="middle">R₃</text>
+<rect x="218" y="145" width="65" height="26" rx="4" transform="rotate(-40 250 158)" fill="var(--card)" stroke="#168b6a" stroke-width="2"/><text x="250" y="164" text-anchor="middle">R₄</text>
+<text x="210" y="18" text-anchor="middle">A</text><text x="80" y="120">B</text><text x="328" y="120">C</text><text x="210" y="225" text-anchor="middle">D</text>
+<path d="M210 28 H365 V202 H210" fill="none" stroke="#d97706" stroke-width="2"/><path d="M355 112 V132 M365 107 V137" stroke="#d97706" stroke-width="3"/>
+</svg></div>
+<p>При подключении источника между A и D есть две параллельные ветви: (1,3) и (2,4). В каждой ветви резисторы соединены последовательно. Из равенства мощностей в каждой паре следует <span class="formula">R₁ = R₃</span> и <span class="formula">R₂ = R₄</span>.</p>
+<p>Суммарная мощность исходной схемы: <span class="formula">P = 2P₀ + 4P₀ = 6P₀ = 1800 Вт</span>. Ветви имеют одинаковое напряжение, а их мощности относятся как 2:4, значит сопротивление левой ветви вдвое больше правой: <span class="formula">R₁ = 2R₂</span>.</p>
+<p>После подключения между B и C получаются две одинаковые параллельные ветви сопротивлением <span class="formula">R₁+R₂ = 3R₂</span>. Следовательно, новое сопротивление <span class="formula">Rнов = 3R₂/2</span>. Для исходной схемы <span class="formula">Rстар = 4R₂/3</span>, поэтому <span class="formula">Pнов/Pстар = Rстар/Rнов = 8/9</span>.</p>
+<div class="answer"><b>Ответ:</b> <span class="formula">1800 × 8/9 = 1600 Вт</span>.</div>
+</article>
+<article data-n="8">
+<h2>8. Неполный чертёж</h2><div class="tag">Зубчатая передача · закон сохранения энергии</div>
+<div class="diagram"><svg viewBox="0 0 420 220" role="img" aria-label="Лебёдка с грузом и рычагом">
+<circle cx="90" cy="90" r="45" fill="#dce2ec" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="90" r="25" fill="#b6c1d3" stroke="currentColor" stroke-width="2"/><circle cx="90" cy="90" r="8" fill="currentColor"/>
+<circle cx="165" cy="90" r="32" fill="#dce2ec" stroke="currentColor" stroke-width="2"/><circle cx="165" cy="90" r="10" fill="#b6c1d3" stroke="currentColor" stroke-width="2"/>
+<circle cx="222" cy="90" r="23" fill="#dce2ec" stroke="currentColor" stroke-width="2"/><circle cx="222" cy="90" r="7" fill="#b6c1d3" stroke="currentColor" stroke-width="2"/>
+<path d="M90 135 V177" stroke="currentColor" stroke-width="3"/><rect x="62" y="177" width="56" height="30" rx="4" fill="#9aa5b8" stroke="currentColor"/><text x="90" y="197" text-anchor="middle" font-size="13">60 кг</text>
+<path d="M222 90 L330 165" stroke="#d97706" stroke-width="5"/><circle cx="330" cy="165" r="6" fill="#d97706"/><path d="M330 165 L345 175" stroke="#d97706" stroke-width="3"/><text x="292" y="195" font-size="13">F на рычаге</text>
+</svg></div>
+<p>Без лебёдки для удержания груза нужна сила <span class="formula">F₀ = mg = 60·9,8 = 588 Н</span>. По условию сила на рычаге на 480 Н меньше, поэтому <span class="formula">F = 588 − 480 = 108 Н</span>.</p>
+<p>За один оборот рычаг проходит путь <span class="formula">2πL</span>, а груз поднимается на h = 0,09 м. Для идеальной лебёдки работа на входе равна приросту потенциальной энергии груза:</p>
+<p><span class="formula">F·2πL = mgh</span>, откуда <span class="formula">L = mgh/(2πF) = 60·9,8·0,09/(2π·108) ≈ 0,078 м</span>.</p>
+<div class="answer"><b>Ответ:</b> 8 см (после округления до целого).</div>
+</article>
+<article data-n="9">
+<h2>9. Стрелка</h2><div class="tag">Качение без проскальзывания · кинематика</div>
+<div class="diagram"><svg viewBox="0 0 420 250" role="img" aria-label="Колесо на цепи, конец A неподвижен, конец B тянут вверх">
+<path d="M95 20 V195 M245 65 V195" stroke="currentColor" stroke-width="3"/><circle cx="95" cy="20" r="5" fill="var(--accent)"/><circle cx="245" cy="65" r="5" fill="var(--accent)"/><text x="72" y="18">A</text><text x="258" y="68">B</text>
+<circle cx="170" cy="160" r="60" fill="#d5dce8" stroke="currentColor" stroke-width="2"/><circle cx="170" cy="160" r="12" fill="#9ba8bc" stroke="currentColor" stroke-width="2"/>
+<path d="M170 160 V213" stroke="#d33" stroke-width="5"/><path d="M159 199 L170 218 L181 199" fill="#d33"/>
+<path d="M260 180 V100" stroke="var(--accent)" stroke-width="3"/><path d="M251 112 L260 98 L269 112" fill="none" stroke="var(--accent)" stroke-width="3"/>
+<text x="285" y="150" font-size="13">диаметр 50 см</text>
+</svg></div>
+<p>Диаметр колеса 50 см, значит радиус <span class="formula">R = 25 см</span>. Когда колесо поворачивается, скорости цепи в двух точках касания отличаются на удвоенную скорость центра. Так как конец A неподвижен, а B движется, получаем <span class="formula">sB = 2sцентра</span>.</p>
+<p>Стрелка сначала направлена вниз, а впервые строго вверх — после поворота колеса на половину оборота, то есть на угол <span class="formula">π</span>. Центр за это время переместится на <span class="formula">sцентра = Rπ</span>, поэтому конец B пройдёт <span class="formula">sB = 2πR = πD</span>.</p>
+<div class="answer"><b>Ответ:</b> <span class="formula">50π ≈ 157 см</span>.</div>
+</article>
+<article data-n="10">
+<h2>10. Сжатие</h2><div class="tag">pV-диаграмма · работа газа · максимальная температура</div>
+<div class="diagram"><svg viewBox="0 0 420 285" role="img" aria-label="pV диаграмма с точками 1, 2 и точкой максимальной температуры">
+<path d="M55 20 V245 H380" stroke="currentColor" stroke-width="2" fill="none"/><g stroke="var(--line)" stroke-width="1">
+<path d="M87 20 V245 M119 20 V245 M151 20 V245 M183 20 V245 M215 20 V245 M247 20 V245 M279 20 V245 M311 20 V245 M343 20 V245"/>
+<path d="M55 52 H380 M55 84 H380 M55 116 H380 M55 148 H380 M55 180 H380 M55 212 H380"/>
+</g>
+<path d="M247 180 L119 52" stroke="#d33" stroke-width="3"/><path d="M130 61 L119 52 L122 67" fill="none" stroke="#d33" stroke-width="3"/>
+<circle cx="247" cy="180" r="5" fill="#d33"/><text x="256" y="177">1</text><circle cx="119" cy="52" r="5" fill="#d33"/><text x="126" y="45">2</text>
+<circle cx="183" cy="116" r="7" fill="var(--accent)"/><path d="M183 116 V245 M55 116 H183" stroke="var(--accent)" stroke-dasharray="4 4" stroke-width="2"/><text x="194" y="111" fill="var(--accent)">T max</text>
+<text x="34" y="27" font-style="italic">p</text><text x="383" y="260" font-style="italic">V</text><text x="40" y="248">0</text>
+</svg></div>
+<p>Для постоянного количества идеального газа <span class="formula">T ∝ pV</span>. На прямой между точками 1 и 2 объём и давление меняются линейно: в клеточных координатах точки имеют значения (V,p) = (6,2) и (2,6), поэтому вдоль процесса <span class="formula">p = 8 − V</span>.</p>
+<p>Тогда <span class="formula">pV = V(8−V)</span> — парабола с максимумом при V = 4, p = 4. Это середина отрезка. Работа, совершённая над газом от точки 1 до максимума температуры, равна площади под участком графика: среднее давление <span class="formula">(2+4)/2 = 3</span> клеточных единицы, изменение объёма — 2 единицы, значит площадь равна 6 клеточным единицам.</p>
+<p>За весь процесс площадь равна <span class="formula">((2+6)/2)·4 = 16</span> условных единиц. Это соответствует 240 Дж, следовательно, одна единица площади равна 15 Дж.</p>
+<div class="answer"><b>Ответ:</b> <span class="formula">6·15 = 90 Дж</span>.</div>
+<div class="controls"><label for="progress">Посмотри, как меняется pV вдоль процесса:</label><input id="progress" class="range" type="range" min="0" max="100" value="50"><b id="pv">pV = 16</b></div><div class="bar"><span id="progressbar"></span></div><p id="progressnote" class="small">При V = 4 и p = 4 температура максимальна.</p>
+</article>
+</section>
+<footer>Учебный разбор по приложенным условиям. Чертежи перерисованы схематически для объяснения принципа.</footer>
+</main>
+<script>
+const nav=document.getElementById('nav'),cards=[...document.querySelectorAll('article')];
+cards.forEach((card,i)=>{const b=document.createElement('button');b.textContent=i+1;b.addEventListener('click',()=>show(i));nav.appendChild(b)});
+function show(i){cards.forEach((c,j)=>c.classList.toggle('active',i===j));[...nav.children].forEach((b,j)=>b.classList.toggle('active',i===j));}
+show(0);
+const slider=document.getElementById('progress');
+if(slider){slider.addEventListener('input',()=>{const t=Number(slider.value)/100,V=6-4*t,p=2+4*t,pv=V*p;document.getElementById('pv').textContent='pV = '+pv.toFixed(2);document.getElementById('progressbar').style.width=slider.value+'%';document.getElementById('progressnote').textContent=`V = ${V.toFixed(2)}, p = ${p.toFixed(2)}. Максимум pV = 16 достигается при V = 4, p = 4.`;});slider.dispatchEvent(new Event('input')); }
+</script>
+</body></html>
